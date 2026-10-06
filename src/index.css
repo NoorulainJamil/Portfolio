@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "Instrument Serif", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f4f1e9;
+  color: #17251d;
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #e95636;
+  color: white;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 180ms ease;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: #e95636;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 180ms ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.hero-orb-one {
+  width: 28rem;
+  height: 28rem;
+  top: 6rem;
+  right: -12rem;
+  border: 1px solid rgb(23 37 29 / 12%);
+}
+
+.hero-orb-two {
+  width: 12rem;
+  height: 12rem;
+  bottom: 4rem;
+  left: -5rem;
+  background: rgb(233 86 54 / 8%);
+}
+
+.experience-row {
+  transition: padding 240ms ease, background 240ms ease;
+}
+
+.experience-row:hover {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background: rgb(255 255 255 / 32%);
+}
+
+.skill-card {
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgb(23 37 29 / 10%);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 60%);
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+  outline: none;
+  background: transparent;
+  padding: 0.8rem 0;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  transition: border-color 180ms ease;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: #f0a38e;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgb(255 255 255 / 28%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

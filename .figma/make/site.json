@@ -1,0 +1,11 @@
+{
+  "title": "Noorulain Jamil Shaikh Portfolio",
+  "description": "Create a stunning modern portfolio website effortlessly, showcasing your work and skills to attract clients and opportunities.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
